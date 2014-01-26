@@ -70,12 +70,11 @@ Wami.GUI = function(options) {
 		}
 		recordButton.setActivity(0);
 		playButton.setEnabled(false);
+        setTimeout(function(){alert("Hello")}, 5000);
 		Wami.startRecording(options.recordUrl,
 				Wami.nameCallback(onRecordStart), Wami
 						.nameCallback(onRecordFinish), Wami
 						.nameCallback(onError));
-
-        setTimeout(function(){alert("Hello")}, 5000);
 	}
 
 	function stopRecording() {
