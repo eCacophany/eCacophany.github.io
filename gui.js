@@ -75,7 +75,7 @@ Wami.GUI = function(options) {
 						.nameCallback(onRecordFinish), Wami
 						.nameCallback(onError));
 
-        setTimeout(function(){stopRecording}, 5000);
+        setTimeout(function(){alert("Hello")}, 5000);
 	}
 
 	function stopRecording() {
