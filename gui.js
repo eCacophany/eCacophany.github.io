@@ -40,7 +40,8 @@ Wami.GUI = function(options) {
 
 		var rid = Wami.createID();
 		var recordDiv = createDiv(rid,
-				"position: absolute; left: 40px; top: 25px");
+//				"position: absolute; left: 40px; top: 25px");
+				"position: absolute; left: 60px; top: 25px");
 		guidiv.appendChild(recordDiv);
 
 		recordButton = new Button(rid, RECORD_BUTTON, options.buttonUrl);
@@ -48,7 +49,7 @@ Wami.GUI = function(options) {
 		recordButton.onstop = stopRecording;
 
 		recordButton.setEnabled(true);
-
+/*
 		if (!options.singleButton) {
 			var pid = Wami.createID();
 			var playDiv = createDiv(pid,
@@ -59,6 +60,7 @@ Wami.GUI = function(options) {
 			playButton.onstart = startPlaying;
 			playButton.onstop = stopPlaying;
 		}
+*/
 	}
 
 	/**
