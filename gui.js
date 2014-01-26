@@ -40,8 +40,7 @@ Wami.GUI = function(options) {
 
 		var rid = Wami.createID();
 		var recordDiv = createDiv(rid,
-//				"position: absolute; left: 40px; top: 25px");
-				"position: absolute; left: 60px; top: 25px");
+				"position: absolute; left: 40px; top: 25px");
 		guidiv.appendChild(recordDiv);
 
 		recordButton = new Button(rid, RECORD_BUTTON, options.buttonUrl);
