@@ -70,7 +70,7 @@ Wami.GUI = function(options) {
 		}
 		recordButton.setActivity(0);
 		playButton.setEnabled(false);
-        setTimeout(function(){stopRecording}, 5000);
+
 		Wami.startRecording(options.recordUrl,
 				Wami.nameCallback(onRecordStart), Wami
 						.nameCallback(onRecordFinish), Wami
@@ -245,6 +245,7 @@ Wami.GUI = function(options) {
 					self.active = false;
 					self.onstop();
 				} else if (!self.active && self.onstart) {
+                    setTimeout(function(){self.active = false;self.onstop();}, 5000);
 					self.active = true;
 					self.onstart();
 				}
