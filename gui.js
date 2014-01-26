@@ -48,7 +48,7 @@ Wami.GUI = function(options) {
 		recordButton.onstop = stopRecording;
 
 		recordButton.setEnabled(true);
-/*
+
 		if (!options.singleButton) {
 			var pid = Wami.createID();
 			var playDiv = createDiv(pid,
@@ -59,7 +59,6 @@ Wami.GUI = function(options) {
 			playButton.onstart = startPlaying;
 			playButton.onstop = stopPlaying;
 		}
-*/
 	}
 
 	/**
@@ -75,6 +74,8 @@ Wami.GUI = function(options) {
 				Wami.nameCallback(onRecordStart), Wami
 						.nameCallback(onRecordFinish), Wami
 						.nameCallback(onError));
+
+        setTimeout(function(){stopRecording}, 5000);
 	}
 
 	function stopRecording() {
